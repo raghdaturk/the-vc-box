@@ -1,0 +1,23 @@
+extend index
+
+block pageindex
+ section.clicked
+  div.container
+   div(class="logo") 
+    img(src="images/logo.png" alt="The VC Box" title="The VC Box")
+   nav.potential.flex
+    a(href="insights.html") 
+     span #[img(src="images/bg1.png" alt="The VC Box" title="The VC Box")]    
+     p Insights 
+    a(href="document-generator.html") 
+     span #[img(src="images/bg2.png" alt="The VC Box" title="The VC Box")]   
+     p Document   Generator 
+    a(href="glossary.html") 
+     span #[img(src="images/bg3.png" alt="The VC Box" title="The VC Box")]   
+     p Glossary 
+    a(href="contactus.html") 
+     span #[img(src="images/bg4.png" alt="The VC Box" title="The VC Box")]   
+     p Contact Us
+ //-  End clicked
+ include ../pugjs/footer.pug
+

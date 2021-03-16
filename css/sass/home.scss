@@ -1,0 +1,106 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/loading';
+@import 'layout/landing';
+@import 'layout/contact';
+@import 'layout/terms-of-use';
+@import 'layout/error404';
+@import 'layout/footer';
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    @include reset;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 1px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: $ofwhite;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background-color: $color;
+    cursor: pointer;
+}
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+/* Handle on hover */
+
+body {
+    direction: $direction;
+    text-align: $left;
+    background: $color url(../images/highlight.png) no-repeat;
+    position: relative;
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.container-fluid {
+    padding: $zero $com-spacing-8;
+    @media (max-width: 991px) {
+        padding: $zero $com-spacing-3;
+    }
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    border: $zero;
+    height: 50px;
+    padding: $com-spacing-3;
+    margin: $zero;
+    margin-bottom: $com-spacing-3;
+    border-radius: 5px;
+    &:last-child {
+        margin: $zero;
+    }
+    svg {
+        max-width: 25px;
+    }
+    .contant {
+        margin: $zero !important;
+        margin-left: $com-spacing-3 !important;
+        p {
+            color: $white;
+        }
+    }
+    &.alert-success {
+        background: linear-gradient(303.91deg, #1F7A66 7.57%, #60B3A7 94.39%);
+    }
+    &.alert-danger {
+        background: linear-gradient(303.91deg, #C24848 7.57%, #D34A4A 94.39%);
+    }
+}

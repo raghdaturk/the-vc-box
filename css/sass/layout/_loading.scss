@@ -1,0 +1,66 @@
+ .loading {
+     width: $fullwidth;
+     position: fixed;
+     top: 0;
+     left: 0;
+     @include flex;
+     height: 100vh;
+     background: $color url(../images/highlight.png) repeat;
+     text-align: center;
+     z-index: 1003;
+     .container {
+         height: 300px;
+         @media (max-width: 991px) {
+             height: 220px;
+         }
+     }
+     .cd-single-point {
+         @include position(absolute, $left: 0px, $right: 0px);
+         @include flex;
+         margin: $zero $auto;
+         width: 300px;
+         height: 300px;
+         cursor: pointer;
+         background: #ffffff52;
+         @include border-radius(50%);
+         z-index: 20;
+         @media (max-width: 991px) {
+             width: 220px;
+             height: 220px;
+         }
+         &::after {
+             content: '';
+             @include position(absolute, $top: 0, $left: 0, );
+             @include border-radius(50%);
+             width: $fullwidth;
+             height: $fullwidth;
+             animation: cd-pulse 2s infinite;
+         }
+         img {
+             width: 245px;
+             @media (max-width: 991px) {
+                 width: 175px;
+             }
+         }
+         .innerbc {
+             @include position(absolute, $top: 0px, $left: 0px);
+             @include flex;
+             width: 72px;
+             height: 72px;
+             @include border-radius(50%);
+             background: $white;
+             z-index: 10;
+             color: $yellow;
+             @keyframes cd-pulse {
+                 0% {
+                     box-shadow: 0 0 0 0 $white;
+                 }
+                 100% {
+                     box-shadow: 0 0 0 30px rgba(255, 150, 44, 0)
+                 }
+             }
+         }
+     }
+ }
+ 
+ //* End loading

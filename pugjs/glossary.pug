@@ -1,0 +1,41 @@
+extend index
+
+block pageindex
+  section.glossary
+   div.container-fluid
+    h2.title glossary
+    nav.alphabet
+      a(href="#") A
+      a(href="#" class="active") B
+      a(href="#") c
+      a(href="#") d
+      a(href="#") e
+      a(href="#") f
+      a(href="#") g
+      a(href="#") h
+      a(href="#") i 
+      a(href="#") j
+      a(href="#") k
+      a(href="#") l
+      a(href="#") m 
+      a(href="#") n
+      a(href="#") o 
+      a(href="#") p
+      a(href="#") q
+      a(href="#") r
+      a(href="#") s
+      a(href="#") t
+      a(href="#") u
+      a(href="#") v
+      a(href="#") w
+      a(href="#") x
+      a(href="#") y
+      a(href="#") z
+    - for (var x = 0; x < 12; x++)
+       div.content
+        h3.title Lorem
+        p.text   By accessing the website at https://vcbox.com or any application in a subdomain, you are agreeing to be bound by these terms of service, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website and applications are protected by applicable copyright and trademark law.
+  //- End glossary
+  include ../pugjs/footer.pug
+
+

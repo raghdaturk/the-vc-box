@@ -1,0 +1,149 @@
+.header {
+    position: fixed;
+    top: $zero;
+    left: $zero;
+    display: flex;
+    align-items: center;
+    width: $fullwidth;
+    z-index: 1000;
+    background: $color;
+    padding: $com-spacing-6 $zero;
+    @media (max-width: 991px) {
+        padding: $com-spacing-3 $zero;
+    }
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .logo {
+        img {
+            width: 180px;
+            @media (max-width: 991px) {
+                width: 150px;
+            }
+        }
+    }
+    .menu {
+        width: $fullwidth;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: $com-spacing-8;
+        @media (max-width: 991px) {
+            position: fixed;
+            left: -100%;
+            top: 80px;
+            display: inline-block;
+            width: $fullwidth;
+            height: calc(100% - 100px);
+            background: $color url(../images/highlight.png) no-repeat;
+            margin: $zero;
+            @include transition(all 0.5s ease-in-out 0s);
+            padding: $zero $com-spacing-3;
+            &.active {
+                left: $zero;
+            }
+        }
+        .form-search {
+            width: 300px;
+            @media (max-width: 991px) {
+                width: $fullwidth;
+            }
+            input {
+                width: $fullwidth;
+                background: $colortext;
+                @include border-radius(5px);
+                padding: $com-spacing-2;
+                height: 45px;
+                outline: $none;
+                color: $blak;
+                border: 2px solid transparent;
+                @include transition(all 0.5s ease-in-out 0s);
+                &:focus {
+                    background: $none;
+                    border: 2px solid $colortext;
+                    color: $colortext;
+                }
+                @media (max-width: 991px) {
+                    height: 35px;
+                }
+            }
+             ::placeholder {
+                color: #283148;
+            }
+             :-ms-input-placeholder {
+                color: #283148;
+            }
+             ::-ms-input-placeholder {
+                color: #283148;
+            }
+        }
+        .navmenu {
+            display: flex;
+            @media (max-width: 991px) {
+                display: block;
+                margin-top: $com-spacing-7;
+            }
+            a {
+                position: relative;
+                color: #9DB3C0;
+                text-transform: uppercase;
+                font-weight: 500;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-left: $com-spacing-6;
+                @media (max-width: 991px) {
+                    display: block;
+                    margin: $zero;
+                    font-weight: normal;
+                    margin-top: $com-spacing-6;
+                }
+                &:before {
+                    content: "";
+                    @include position(absolute, $bottom: -8px, $left: 0px);
+                    width: 0;
+                    background: #9DB3C0;
+                    height: 1px;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    @media (max-width: 991px) {
+                        display: $none;
+                    }
+                }
+                &.active,
+                &:hover {
+                    &:before {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+    .m-click {
+        position: absolute;
+        right: $com-spacing-3;
+        top: 17px;
+        opacity: 0;
+        z-index: -20;
+        @media (max-width: 991px) {
+            opacity: 1;
+            z-index: 1;
+        }
+        .text {
+            position: absolute;
+            right: $zero;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .menu-clos {
+            @include cancel-icon;
+            @media (max-width: 991px) {
+                display: $none;
+                right: $zero;
+                top: 9px;
+            }
+        }
+    }
+}
+
+// End Header

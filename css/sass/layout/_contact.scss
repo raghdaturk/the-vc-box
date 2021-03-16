@@ -1,0 +1,94 @@
+ .contact {
+     @include flex;
+     position: relative;
+     width: $fullwidth;
+     height: calc(100vh - 115px);
+     margin-top: 115px;
+     padding: $com-spacing-8 $zero;
+     @media (max-width: 991px) {
+         margin-top: 80px;
+         height: $auto;
+         padding: $com-spacing-4 $zero;
+     }
+     .title {
+         @include title;
+     }
+     .text {
+         font-weight: 300;
+         margin-top: $com-spacing-6;
+         @media (max-width: 991px) {
+             br {
+                 display: $none;
+             }
+         }
+     }
+     .row {
+         .item {
+             @media (max-width: 991px) {
+                 &:first-child {
+                     order: 2;
+                 }
+             }
+         }
+     }
+     .item {
+         margin-top: $com-spacing-6;
+         @media (max-width: 991px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+             margin-top: $com-spacing-6;
+         }
+         &:last-child {
+             margin-top: -50px;
+             text-align: center;
+             @media (max-width: 991px) {
+                 margin-top: $com-spacing-6;
+                 text-align: $left;
+             }
+         }
+         img {
+             max-width: $fullwidth;
+         }
+         form {
+             .input {
+                 margin-top: $com-spacing-4;
+                 @media (max-width: 991px) {}
+                 .form-control {
+                     height: 55px;
+                     border: $zero !important;
+                     box-shadow: $none !important;
+                     border-bottom: 1px solid $colortext !important;
+                     background: $none;
+                     font-weight: 300;
+                     padding: $zero;
+                     @include border-radius(0px);
+                     font-weight: 300;
+                 }
+                  ::placeholder {
+                     color: $colortext;
+                 }
+                  :-ms-input-placeholder {
+                     color: $colortext;
+                 }
+                  ::-ms-input-placeholder {
+                     color: $colortext;
+                 }
+                 textarea.form-control {
+                     resize: $none;
+                     color: $colortext;
+                 }
+                 .bottom {
+                     @include bottom;
+                     width: $fullwidth;
+                     background: $colortext;
+                     color: $color;
+                     font-weight: 500;
+                     height: 50px;
+                     @media (max-width: 991px) {}
+                 }
+             }
+         }
+     }
+ }
+ 
+ // End contactus

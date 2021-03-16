@@ -1,0 +1,14 @@
+extend index
+
+block pageindex
+  section.document-generator
+   div.container-fluid
+    h2.title Document Generator
+    div.inner
+     div.lds-spinner
+      - for (var x = 0; x < 12; x++)
+         div 
+  //-  End document-generator
+  include ../pugjs/footer.pug
+
+

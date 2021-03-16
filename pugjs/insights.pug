@@ -1,0 +1,42 @@
+extend index
+
+block pageindex
+  section.insights
+   div.container-fluid
+    div.headtitle
+     h2.title Insights
+     a(href="#" class="filter") 
+      svg(id="Component_25_2" data-name="Component 25 – 2" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21")
+       rect(id="Rectangle_26925" data-name="Rectangle 26925" width="21" height="21" fill="none")
+       g(id="Group_6216" data-name="Group 6216" transform="translate(-1262 -134)")
+        line(id="Line_21" data-name="Line 21" x1="13" transform="translate(1266.5 141.5)" fill="none" stroke="#9db3c0" stroke-width="1.5")
+        line(id="Line_23" data-name="Line 23" x1="9" transform="translate(1268.5 144.5)" fill="none" stroke="#9db3c0" stroke-width="1.5")
+        line(id="Line_24" data-name="Line 24" x1="5" transform="translate(1270.5 147.5)" fill="none" stroke="#9db3c0" stroke-width="1.5")
+      span 2
+      | Filter
+    div.responsive
+      - for (var x = 0; x < 12; x++)
+         div
+          div.row
+           div.col-sm-4.text-ins
+            h4.title Lorem Ipsum is simply dummy
+            p.text Lorem Ipsum is simply dummy text of the  industry. Lorem Ipsum has been the industry’s ever since the 1500s….
+            span.span-inv Investment
+            div.user
+             img(src="images/user.png" alt="The VC Box" title="The VC Box")
+             h3.name John Doe  
+            a(href="#" class="bottom") 
+             | Explore this box
+             svg(xmlns="http://www.w3.org/2000/svg" width="14.571" height="7.058" viewBox="0 0 14.571 7.058")
+              g(id="Group_5991" data-name="Group 5991" transform="translate(-196.667 -1243.209)")
+               g(id="right-arrow" transform="translate(196.667 1243.209)")
+                g(id="Group_5978" data-name="Group 5978" transform="translate(0 0)")
+                 path(id="Path_38" data-name="Path 38" d="M14.4,135.126h0l-2.974-2.96a.569.569,0,0,0-.8.807l2,1.987H.569a.569.569,0,0,0,0,1.138H12.623l-2,1.987a.569.569,0,1,0,.8.807l2.974-2.96h0A.57.57,0,0,0,14.4,135.126Z" transform="translate(0 -132)" fill="#253238")
+      
+
+           div.col-sm-8.photo
+            img(src="images/invest1.png" alt="The VC Box" title="The VC Box")
+  //-  End insights
+  include ../pugjs/footer.pug
+
+

@@ -1,0 +1,94 @@
+.footer {
+    width: $fullwidth;
+    border-top: 1px solid #a1b3bf52;
+    background: $color;
+    padding-bottom: $com-spacing-6;
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 560px) {
+            display: block;
+        }
+    }
+    .communication {
+        margin-top: $com-spacing-6;
+        @media (max-width: 560px) {
+            width: $fullwidth;
+        }
+        .followus {
+            width: $fullwidth;
+            font-size: 12px;
+            color: #61737c;
+        }
+        .social {
+            display: flex;
+            margin-top: $com-spacing-5;
+            a {
+                margin-right: $com-spacing-3;
+                &:last-child {
+                    margin: $zero;
+                }
+                &:hover {
+                    svg {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .terms {
+            width: $fullwidth;
+            margin-top: $com-spacing-6;
+            a {
+                text-transform: uppercase;
+            }
+        }
+    }
+    .sendemail {
+        margin-top: $com-spacing-6;
+        width: 335px;
+        @media (max-width: 560px) {
+            width: $fullwidth;
+        }
+        .text {
+            color: #61737c;
+        }
+        .form-email {
+            width: $fullwidth;
+            margin-top: $com-spacing-6;
+            position: relative;
+            input {
+                width: $fullwidth;
+                height: 50px;
+                outline: $none;
+                background: $colortext;
+                color: $color;
+                padding: $zero 120px $zero 35px;
+            }
+             ::placeholder {
+                color: $color;
+            }
+             :-ms-input-placeholder {
+                color: $color;
+            }
+             ::-ms-input-placeholder {
+                color: $color;
+            }
+            img {
+                position: absolute;
+                left: $com-spacing-3;
+                top: $com-spacing-5;
+                max-width: 13px;
+            }
+            .bottom {
+                @include bottom;
+                position: absolute;
+                right: $com-spacing-2;
+                top: $com-spacing-2;
+            }
+        }
+    }
+}
+
+// End footer

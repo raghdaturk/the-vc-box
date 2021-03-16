@@ -1,0 +1,101 @@
+ .landing {
+     @include flex;
+     text-align: center;
+     position: relative;
+     width: $fullwidth;
+     height: calc(100vh - 115px);
+     margin-top: 115px;
+     padding-bottom: $com-spacing-6;
+     @media (max-width: 991px) {
+         margin-top: 80px;
+         height: calc(100vh - 105px);
+     }
+     .logo {
+         img {
+             width: 180px;
+             @media (max-width: 991px) {
+                 width: 150px;
+             }
+         }
+     }
+     .title {
+         font-size: 20px;
+         line-height: 30px;
+         text-transform: uppercase;
+         margin-top: $com-spacing-6;
+         @media (max-width: 991px) {
+             font-size: 14px;
+             line-height: 22px;
+             font-weight: 100;
+         }
+     }
+     .potential {
+         display: flex;
+         justify-content: center;
+         width: $fullwidth;
+         margin-top: $com-spacing-6;
+         a {
+             width: 140px;
+             span {
+                 @include flex;
+                 width: 140px;
+                 height: 160px;
+                 background: url(../images/bg.png) no-repeat;
+                 background-size: $fullwidth $fullwidth;
+                 color: $blak;
+                 font-weight: 500;
+                 img {
+                     max-width: 47px;
+                     max-height: 47px;
+                 }
+             }
+         }
+     }
+ }
+ 
+ .clicked {
+     @extend .landing;
+     @media (max-width: 991px) {
+         height: $auto;
+     }
+     .flex {
+         justify-content: space-between;
+         @media (max-width: 991px) {
+             display: block;
+         }
+         a {
+             p {
+                 @include flex;
+                 width: $fullwidth;
+                 margin-top: $com-spacing-3;
+                 font-weight: 500;
+                 height: 33px;
+                 overflow: hidden;
+                 @media (max-width: 991px) {
+                     font-size: 13px;
+                 }
+             }
+             @media (max-width: 991px) {
+                 span {
+                     width: 120px;
+                     height: 140px;
+                 }
+                 &:nth-last-child(1),
+                 &:nth-last-child(4) {
+                     width: $fullwidth;
+                     span {
+                         margin: $zero $auto;
+                     }
+                 }
+                 &:nth-last-child(2),
+                 &:nth-last-child(3) {
+                     display: inline-block;
+                     width: 50%;
+                     span {
+                         margin: $zero $auto;
+                     }
+                 }
+             }
+         }
+     }
+ }

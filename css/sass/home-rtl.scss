@@ -1,0 +1,33 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+$direction:rtl;
+$right:left;
+$left:right;
+body {
+    direction: $direction;
+    text-align: $left;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {}
